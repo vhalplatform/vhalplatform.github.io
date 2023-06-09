@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gıda İhtiyaç Formu | Deprem İmece Platformu</title>
+    <link rel="stylesheet" href="../assets/css/theme.css?v=1" />
+    <link rel="stylesheet" href="/assets/css/app.css?v=1" />
+  </head>
+
+  <body data-theme="light">
+    <div class="moon_icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-moon-stars-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        />
+      </svg>
+    </div>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="../assets/images/logo.svg" alt="Deprem İmece Platformu" width="150" />
+        </div>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="/yararli-linkler.html">Yararlı Linkler</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section>
+          <a href="/" class="back-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="rgba(71, 101, 255, 1)"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+            </svg>
+            Geri
+          </a>
+          <h1>Gıda İhtiyaç Formu</h1>
+          <div class="form">
+            <div class="warningBox">
+              <div style="display: inline-flex; align-items: center; justify-content: space-between">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="rgba(255, 181, 70, 1)"
+                  style="width: 30px; height: 30px; flex-shrink: 0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+                <small style="margin-left: 10px; color: white">
+                  Eğer bu yardım talebini daha önce gönderdiysen lütfen tekrar gönderme. Kayıtlarda kopya bilgi olması
+                  kurtarma operasyonlarını olumsuz etkiler.
+                </small>
+                <div style="padding-right: 10px; width: 180px">
+                  <a href="/yardim-istekleri/gida.html" class="warning-link mevcutKayitlarButon"
+                    >Mevcut&nbsp;Kayıtlara Git</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <small>* İle başlayan alanlar zorunludur.</small>
+
+            <form id="form">
+              <input type="text" name="yardimTipi" value="gida" style="display: none" readonly />
+              <input type="text" name="yardimDurumu" value="bekleniyor" style="display: none" readonly />
+              <div class="form-row form-col-3">
+                <div class="form-col">
+                  <label for="adSoyad">* İsim & Soyisim:</label>
+                  <input
+                    type="text"
+                    class="form-control required-field"
+                    id="adSoyad"
+                    name="adSoyad"
+                    placeholder="* İsim & Soyisim"
+                    required
+                  />
+                </div>
+                <div class="form-col">
+                  <label for="email">Email:</label>
+                  <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="email" name="email" placeholder="Email" />
+                </div>
+                <div class="form-col">
+                  <label for="telefon">* Telefon (5XX XXX XX XX): </label>
+                  <input type="tel" class="form-control" id="telefon" name="telefon" placeholder="* Telefon" required />
+                </div>
+              </div>
+              <div class="form-row form-col-3" id="yedekTelefonlar" style="align-items: center">
+                <a href="javascript: void 0" id="ekTelefonLinki" onclick="addExtraPhone()" class="plus-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                    id="IconChangeColor"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      id="plusIcon"
+                      fill="#4765ff"
+                    />
+                  </svg>
+                  Başka Telefon Ekle
+                </a>
+              </div>
+              <div class="form-row">
+                <label for="kisiSayisi">Kişi Sayısı:</label>
+                <input
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="1024"
+                  onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'"
+                  maxlength="4"
+                  class="form-control"
+                  id="kisiSayisi"
+                  name="kisiSayisi"
+                  placeholder="Kişi Sayısı"
+                />
+              </div>
+              <div class="form-row">
+                <label for="adres">* Adres:</label>
+                <input
+                  type="text"
+                  class="form-control required-field"
+                  id="adres"
+                  name="adres"
+                  placeholder="* Adres"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label for="adres-tarifi">Adres Tarifi:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="adres-tarifi"
+                  name="adresTarifi"
+                  placeholder="Adres Tarifi"
+                />
+              </div>
+              <div class="form-row form-col-auto">
+                <div class="form-col" style="width: 100px">
+                  <div class="form-row">
+                    <label> Aciliyet: </label>
+                  </div>
+                  <div class="form-row">
+                    <label for="kritik">
+                      <input type="radio" id="kritik" name="acilDurum" value="kritik" />
+                      Kritik
+                    </label>
+                  </div>
+                  <div class="form-row">
+                    <label for="orta">
+                      <input type="radio" id="orta" name="acilDurum" value="orta" checked />
+                      Orta
+                    </label>
+                  </div>
+                  <div class="form-row">
+                    <label for="normal">
+                      <input type="radio" id="normal" name="acilDurum" value="normal" />
+                      Normal
+                    </label>
+                  </div>
+                </div>
+                <div class="form-col">
+                  <label for="fizikiDurum">* Fiziki Durum Hakkında Bilgi:</label>
+                  <textarea
+                    class="form-control required-field"
+                    name="fizikiDurum"
+                    id="fizikiDurum"
+                    cols="30"
+                    rows="4"
+                    placeholder="* Fiziki Durum Hakkında Bilgi"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="tweetLink">Tweet Linki:</label>
+                <input type="text" class="form-control" id="tweetLink" name="tweetLink" placeholder="Tweet Linki" />
+              </div>
+              <div class="form-row">
+                <label for="googleMapLink">Google Maps Linki:</label>
+                <input type="text" class="form-control" id="googleMapLink" name="googleMapLink" placeholder="Google Maps Linki" />
+              </div>
+              <div class="form-col">
+                <div class="form-row">
+                  <label for="arac-var">
+                    <input type="radio" id="arac-var" name="fields-aracDurumu" value="var" />
+                    Aracım var, yardımı kendim teslim alabilirim.
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label for="arac-yok">
+                    <input type="radio" id="arac-yok" name="fields-aracDurumu" value="yok" checked />
+                    Aracım yok, yardımın teslim edilmesi gerek.
+                  </label>
+                </div>
+              </div>
+              <p class="aydinlatma">
+                6698 sayılı KVKK kapsamında “Uygulamamıza depremzede ya da depremzede yakını olarak kaydolan
+                kullanıcılardan ad, soyadı, iletişim bilgisi, log kaydı ve depremzedenin sisteme girilen ve kendileri
+                tarafından alenileştirilmiş konum verilerini topluyoruz.” Veri işleme hukuki sebeplerimizi, amaçlarımızı
+                görmek ve haklarınızı öğrenmek <a href="../legal/hukuki-kvkk.html">Aydınlatma Metnini</a>
+                ziyaret etmek ister misiniz?
+              </p>
+              <div class="form-row">
+                <label for="kvkk" class="checkbox">
+                  <input type="checkbox" id="kvkk" name="fields-kvkk" required />
+                  * Okudum ve aydınlandım
+                </label>
+              </div>
+              <div>
+                <button type="submit">Gönder</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="/yararli-linkler.html">Yararlı Linkler</a>
+            </li>
+            <li>
+              <a href="/iletisim.html">İletişim</a>
+            </li>
+            <li>
+              <a href="/legal/cerez-politikasi.html">Çerez Politikası</a>
+            </li>
+            <li>
+              <a href="/legal/gizlilik-sozlesmesi.html">Gizlilik Sözleşmesi</a>
+            </li>
+            <li>
+              <a href="/legal/hukuki-kvkk.html">Aydınlatma Metni</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="info-title">Kişisel Verilerin İşlenmesine İlişkin Aydınlatma:</p>
+        <p>
+          Bu uygulama, 6 Şubat 2023 tarihinde Türkiye’de meydana gelen büyük deprem felaketinde, arama kurtarma
+          çalışmaları ile yardım ve destek taleplerini ortak bir veri tabanında toplayarak yetkili kurum ve kuruluşlara
+          aktarmak amacı ile bilişim teknolojileri alanında çalışan gönüllüler tarafından oluşturulmuştur. Yardım ya da
+          desteğe ihtiyacı olduğunu belirttiğiniz kişilerin kişisel verileri ‘’Fiili imkânsızlık nedeniyle rızasını
+          açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir
+          başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması’’ hukuki sebebine dayanarak, otomatik
+          yollarla işlenecektir. Tarafınıza ait kişisel veriler, ‘’Bir hakkın tesisi, kullanılması veya korunması için
+          veri işlemenin zorunlu olması’’ hukuki sebebine dayanarak işlenecektir.
+        </p>
+        <p>
+          Paylaşacağınız yardım, destek taleplerinde yer alan isim, soy isim, telefon ve adres gibi kişisel veriler,
+          veli, vasi, temsilci bilgisi, medeni durum ve sağlık bilgileri tarafımızca oluşturulan ve sunucuları yurtiçi
+          ve yurtdışında bulunan veri tabanında toplanarak, Afad, Akut, Kızılay gibi yetkili arama kurtarma
+          kuruluşlarının yanı sıra destek ve yardım taleplerini karşılayabilecek sivil toplum kuruluşları ile kişisel
+          veri işleme amacı ile sınırlı olarak paylaşılacaktır.
+        </p>
+        <p>
+          Bu platform kar amacı gütmeden imece usulu bilgi paylaşımı için geliştirildi, hiçbir kurum ve kuruluşla
+          ilişiği yoktur.
+        </p>
+        <p>Gerektiğinde yetkili merci ve kurumlara bilgi sağlanabilir ve işbirliği yapılabilir.</p>
+        <p>Deprem İmece Platformu © 2023</p>
+      </div>
+    </footer>
+    <script src="../assets/js/app.js?v=1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet" />
+    <script src="../assets/js/requests/formSubmission.js"></script>
+    <script>
+      var form = document.getElementById('form');
+      form.onsubmit = (event) => submission(event, 'yardim', '/yardim-istekleri/gida.html');
+      let extraPhoneCount = 0;
+    </script>
+  </body>
+</html>
