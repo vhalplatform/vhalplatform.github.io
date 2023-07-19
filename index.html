@@ -8,6 +8,8 @@
     <title>VHAL Medya</title>
     <link rel="stylesheet" href="assets/css/theme.css?v=1" />
     <link rel="stylesheet" href="assets/css/app.css?v=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
 .coffee-button {
   position: fixed;
@@ -63,42 +65,88 @@
         border: 2px solid rgba(71, 101, 255, 1);
         box-shadow: 0px 10px 20px rgba(71, 101, 255, 0.5);
       }
-      
-      /* Footer stilini tanımlama */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
+
+
+.black-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer-left p {
-    margin: 0;
-    font-size: 16px;
-    color: #888;
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
-.footer-links li {
-    display: inline;
-    margin-right: 55px;
+.footer-logo h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.footer-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.footer-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer-links li a:hover {
-    text-decoration: underline;
+.footer-navigation li {
+  display: inline-block;
+  margin-right: 15px;
 }
 
+.footer-navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social-media a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+        
 
       </style>
       
@@ -204,39 +252,40 @@ footer {
         
       </div>
     </main>
-    <footer class="black-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img style="border-radius:10px;"    src="/assets/images/vhalmedyalogo.jpg" alt="Website Logo">
-            <h2>VHAL Medya</h2>
-          </div>
-          <div class="footer-navigation">
-            <ul>
-              
-              <li><a href="/yararli-linkler.html">Yararlı Bağlantılar</a></li>
-              <li><a href="legal/cerez-politikasi.html">Çerez Politakası</a></li>
-              
-              <li><a href="#">Aydınlatma Metni</a></li>
-            </ul>
-          </div>
-          <div class="footer-social-media">
-            <ul>
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="https://www.instagram.com/vhalmedya" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>Tüm hakları saklıdır &copy; VHAL Medya</p>
-          <p><a href="/legal/gizlilik-sozlesmesi.html">Gizlilik Sözleşmesi</a> | <a href="#">Kullanım Şartları</a></p>
-        </div>
-      </div>
-    </footer>
 <hr>
+<footer class="black-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img style="border-radius:10px;"    src="/assets/images/vhalmedyalogo.jpg" alt="Website Logo">
+        <h2>VHAL Medya</h2>
+      </div>
+      <div class="footer-navigation">
+        <ul>
+          
+          <li><a href="/yararli-linkler.html">Yararlı Bağlantılar</a></li>
+          <li><a href="legal/cerez-politikasi.html">Çerez Politakası</a></li>
+          
+          <li><a href="">Aydınlatma Metni</a></li>
+        </ul>
+      </div>
+      <div class="footer-social-media">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/vhalmedya" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Tüm hakları saklıdır &copy; VHAL Medya</p>
+      <p><a href="/legal/gizlilik-sozlesmesi.html">Gizlilik Sözleşmesi</a> | <a href="#">Kullanım Şartları</a></p>
+    </div>
+  </div>
+</footer>
 
+ 
     <script src="assets/js/app.js?v=1"></script>
   </body>
 </html>
